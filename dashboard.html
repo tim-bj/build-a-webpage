@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-1 .card-icon {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .card-2 .card-icon {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .card-3 .card-icon {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .card-4 .card-icon {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+
+        .card-description {
+            color: #718096;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .card-url {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.85rem;
+            color: #a0aec0;
+            word-break: break-all;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 My Projects</h1>
+            <p class="subtitle">Click any card to access the project</p>
+        </header>
+
+        <div class="dashboard-grid">
+            <a href="https://tim-bj.github.io/anime_expressions_starter.zip/" class="card card-1" target="_blank">
+                <div class="card-icon">🎨</div>
+                <h2 class="card-title">Anime Expressions</h2>
+                <p class="card-description">Starter package for anime expressions project</p>
+                <div class="card-url">tim-bj.github.io/anime_expressions_starter.zip/</div>
+            </a>
+
+            <a href="https://tim-bj.github.io/sell-me-something-starter/" class="card card-2" target="_blank">
+                <div class="card-icon">💼</div>
+                <h2 class="card-title">Sell Me Something</h2>
+                <p class="card-description">Interactive sales presentation starter</p>
+                <div class="card-url">tim-bj.github.io/sell-me-something-starter/</div>
+            </a>
+
+            <a href="https://tim-bj.github.io/top_5_emoji_list/" class="card card-3" target="_blank">
+                <div class="card-icon">😊</div>
+                <h2 class="card-title">Top 5 Emoji List</h2>
+                <p class="card-description">Curated collection of top emoji rankings</p>
+                <div class="card-url">tim-bj.github.io/top_5_emoji_list/</div>
+            </a>
+
+            <a href="https://tim-bj.github.io/flip_treat_webcards/" class="card card-4" target="_blank">
+                <div class="card-icon">🃏</div>
+                <h2 class="card-title">Flip Treat Webcards</h2>
+                <p class="card-description">Interactive card flipping game</p>
+                <div class="card-url">tim-bj.github.io/flip_treat_webcards/</div>
+            </a>
+        </div>
+
+        <footer>
+            <p>Dashboard created with ❤️</p>
+        </footer>
+    </div>
+</body>
+</html>
